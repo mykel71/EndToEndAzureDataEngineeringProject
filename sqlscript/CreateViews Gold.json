@@ -1,0 +1,17 @@
+{
+	"name": "CreateViews Gold",
+	"properties": {
+		"content": {
+			"query": "------------------------\n-- CREATE VIEW Calender \n------------------------\nCREATE VIEW gold.calender\nAS\nSELECT \n    *\nFROM\n    OPENROWSET(\n                BULK 'https://adeprojstoragedatalake.dfs.core.windows.net/silver/AdventureWorks_Calender/',\n                FORMAT = 'PARQUET'\n    ) as query1\n\n\n----------------------\n-- CREATE VIEW customers\n----------------------\nCREATE VIEW gold.customers\nAS\nSELECT \n    *\nFROM\n    OPENROWSET(\n                BULK 'https://adeprojstoragedatalake.dfs.core.windows.net/silver/AdventureWorks_Customers/',\n                FORMAT = 'PARQUET'\n    ) as query2\n\n----------------------\n-- CREATE VIEW Product_Subcategories\n----------------------\nCREATE VIEW gold.Product_Subcategories\nAS\nSELECT \n    *\nFROM\n    OPENROWSET(\n                BULK 'https://adeprojstoragedatalake.dfs.core.windows.net/silver/AdventureWorks_Product_Subcategories/',\n                FORMAT = 'PARQUET'\n    ) as query3\n\n----------------------\n-- CREATE VIEW Products\n----------------------\nCREATE VIEW gold.Products\nAS\nSELECT \n    *\nFROM\n    OPENROWSET(\n                BULK 'https://adeprojstoragedatalake.dfs.core.windows.net/silver/AdventureWorks_Products/',\n                FORMAT = 'PARQUET'\n    ) as query4\n\n\n----------------------\n-- CREATE VIEW Returns\n----------------------\nCREATE VIEW gold.Returns\nAS\nSELECT \n    *\nFROM\n    OPENROWSET(\n                BULK 'https://adeprojstoragedatalake.dfs.core.windows.net/silver/AdventureWorks_Returns/',\n                FORMAT = 'PARQUET'\n    ) as query5\n\n\n----------------------\n-- CREATE VIEW Sales\n----------------------\nCREATE VIEW gold.[Sales]\nAS\nSELECT \n    *\nFROM\n    OPENROWSET(\n                BULK 'https://adeprojstoragedatalake.dfs.core.windows.net/silver/AdventureWorks_Sales*/',\n                FORMAT = 'PARQUET'\n    ) as query6\n\n\n----------------------\n-- CREATE VIEW Territories\n----------------------\nCREATE VIEW gold.[Territories]\nAS\nSELECT \n    *\nFROM\n    OPENROWSET(\n                BULK 'https://adeprojstoragedatalake.dfs.core.windows.net/silver/AdventureWorks_Territories/',\n                FORMAT = 'PARQUET'\n    ) as query7",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "adedatabase",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
