@@ -1,0 +1,9 @@
+{
+	"name": "adf-ade-project-mike",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e25a5738-d009-4139-8dbc-7c7ec9a98570",
+		"tenantId": "565d73bf-656e-4ad6-ac1e-9aac5bce0728"
+	}
+}
